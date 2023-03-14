@@ -1,11 +1,9 @@
-// openAI api key
-// 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
 
 const { Configuration, OpenAIApi } = require("openai");
 const express = require("express")
 const configuration = new Configuration({
     organization: "org-Knw8izOVnXv3GlButBqJ5VWs",
-    apiKey: "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",
+    apiKey: process.env.apiKey,
 });
 const openai = new OpenAIApi(configuration);
 
